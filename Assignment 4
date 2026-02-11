@@ -10,10 +10,10 @@ void main()
  professionalTax= grossSalary*0.02;
  netsalary= grossSalary-professionalTax;
 
- printf("Basic Pay:\n",basicpay);
- printf("HRA :\n",hra);
- printf("TA :\n",ta);
- printf("Gross salary :\n",grossSalary);
- printf("Professional Tax :\n", professionalTax);
- printf("Net salary:\n",netsalay);
+ printf("Basic Pay:%f\n",basicpay);
+ printf("HRA :%f\n",hra);
+ printf("TA :%f\n",ta);
+ printf("Gross salary :%f\n",grossSalary);
+ printf("Professional Tax :%f\n", professionalTax);
+ printf("Net salary:%f\n",netsalay);
 }
