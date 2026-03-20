@@ -3,28 +3,83 @@ int add(int , int);
 int sub(int , int);
 int multiplication(int , int);
 float division(float , float);
+int fact(int);
 
 void main()
 {
-int a,b,ch;
-printf("Enter a no. for factorial calculation:");
-scanf("%d",&c);
-printf("Enter a no :");
-scanf("%d",&a);
-printf("Enter another no :");
-scanf("%d",&b);
-printf("choice 1: Addition\nchoice 2:Subtraction\nchoice 3:Multiplication\nchoice 4:Division\n");
+int a,b,c,ch;
+printf("choice 1: Addition\nchoice 2:Subtraction\nchoice 3:Multiplication\nchoice 4:Division\nchoice 5Factorial\n");
 printf("Enter a choice:");
 scanf("%d",&ch);
 switch(ch)
 {
-case 1:add(a,b)
-break;
-case 2:sub(a,b)
-break;
-case 3:multiplication(a,b)
-break;
-case 4:division(a,b)
-break;
-case 5:fact(c)
-printf("
+  case 1 : printf("Enter a number:");
+  scanf("%d",&a);
+  printf("Enter another number:");
+  scanf("%d",&b);
+  add(a,b);
+  printf("Sum=%d",add(a,b));
+  break;
+  case 2:printf("Enter a number:");
+  scanf("%d",&a);
+  printf("Enter another number:");
+  scanf("%d",&b);
+  sub(a,b);
+  printf(Subtraction=%d",sub(a,b));
+  break;
+  case 3:printf("Enter a number:");
+  scanf("%d",&a);
+  printf("Enter another number:");
+  scanf("%d",&b);
+  multiplication(a,b);
+  printf("Product=%d",multiplication(a,b));
+  break;
+  case 4:printf("Enter a number:");
+  scanf("%f",&a);
+  printf("Enter another number:");
+  scanf("%f",&b);
+  division(a,b);
+  printf("Division=%f",division(a,b));
+  break;
+  case 5: printf("Enter a number:");
+  scanf("%d",&c);
+  printf("Factorial=%d",fact(c));
+  break;
+}
+}
+
+int add(int x , int y)
+{
+  return x+y;
+}
+
+int sub(int x , int y)
+{
+  return x-y;
+}
+
+int multiplication(int x , int y)
+{
+  return x*y;
+}
+
+float division(float x , float y)
+{
+  return x/y;
+}
+
+int fact(int c)
+{
+  int f=1;
+  for(int i=1;i<=c;i++)
+  {
+    f=f*i;
+  }
+ return f;
+}
+
+
+
+  
+
+
