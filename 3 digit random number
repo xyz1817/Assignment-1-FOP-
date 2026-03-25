@@ -1,0 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    int i;
+    int r = rand()%900 + 1;
+    printf("%d",r);
+    return 0;
+}
