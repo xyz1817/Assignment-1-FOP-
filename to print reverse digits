@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int num;
+
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+
+    // Handle negative numbers
+    if (num < 0) {
+        printf("-");
+        num = -num;
+    }
+
+    // Special case for 0
+    if (num == 0) {
+        printf("0");
+    }
+
+    while (num > 0) {
+        printf("%d", num % 10); // Print last digit
+        num /= 10;              // Remove last digit
+    }
+
+    printf("\n");
+    return 0;
+}
