@@ -1,32 +1,46 @@
 #include <stdio.h>
-
-// Function to calculate factorial
-long long fact(int n) {
-    long long f = 1;
-    for(int i = 1; i <= n; i++)
-        f *= i;
-    return f;
-}
+#include <string.h>
 
 int main() {
-    int n;
-    float x, sum = 0;
-    int sign = 1;
+    char str[100], str2[100], rev[100];
+    int i, length = 0, flag = 0;
 
-    printf("Enter value of x (in radians): ");
-    scanf("%f", &x);
+    // Input string
+    printf("Enter a string: ");
+    scanf("%s", str);
 
-    printf("Enter number of terms: ");
-    scanf("%d", &n);
+    // i. Length of string
+    length = strlen(str);
+    printf("Length of string = %d\n", length);
 
-    for(int i = 1; i <= n; i++) {
-        int power = 2*i - 1;   // 1,3,5,7...
-        float term = (sign * (pow(x, power) / fact(power)));
-        sum += term;
-        sign = -sign; // alternate sign
+    // ii. String reversal
+    for(i = 0; i < length; i++) {
+        rev[i] = str[length - i - 1];
     }
+    rev[length] = '\0';
+    printf("Reversed string = %s\n", rev);
 
-    printf("Sum of sine series = %f\n", sum);
+    // iii. Equality check
+    printf("Enter another string to compare: ");
+    scanf("%s", str2);
+
+    if(strcmp(str, str2) == 0)
+        printf("Strings are equal\n");
+    else
+        printf("Strings are NOT equal\n");
+
+    // iv. Palindrome check
+    if(strcmp(str, rev) == 0)
+        printf("String is a palindrome\n");
+    else
+        printf("String is NOT a palindrome\n");
+
+    // v. Substring check
+    if(strstr(str, str2) != NULL)
+        printf("'%s' is a substring of '%s'\n", str2, str);
+    else
+        printf("'%s' is NOT a substring of '%s'\n", str2, str);
 
     return 0;
 }
+        
